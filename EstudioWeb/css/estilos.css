@@ -1,0 +1,11 @@
+.image-container {
+    width: 150px; /* Ajusta el tamaño del contenedor */
+    height: 150px; /* Hacemos la altura igual al ancho para que sea cuadrada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que la imagen no se desborde del cuadrado */
+}
+.image-container img {
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarla */
+}
