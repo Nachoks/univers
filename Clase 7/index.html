@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clase 7</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <!-- BARRA DE USUARIO -->
+    <div class="row bg-dark text-white pt-2">
+      <div class="col">
+        <h5>Sistema de Estudiantes</h5>
+      </div>
+      <div class="col text-end">
+        <h5>Username</h5>
+      </div>
+    </div>
+
+    <!-- NAVEGACION -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="row mt-2 ">
+
+      <!-- Formulario -->
+      <div class="col-12 col-xl-4 order-xl-last ">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-tittle">Agregar Estudiante</h5>
+            <form>
+              <div class="mb-3">
+                <label for="txtnombre" class="form-label">Nombre</label>
+                <input type="text" id="txtnombre" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="txtapellido" class="form-label">Apellido</label>
+                <input type="text" id="txtapellido" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="txtcorreo" class="form-label">Correo</label>
+                <input type="email" id="txtcorreo" class="form-control">
+              </div>
+              <div class="mb-3 text-end d-grid gap-2 d-xl-block ">
+                <button type="reset" class="btn btn-danger">Restablecer</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla con datos -->
+      <div class="col-12 col-xl-8 mt-1 mt-xl-0 hidden-xl-block">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-tittle">Lista Estudiante</h5>
+              <!-- https://www.mockaroo.com/ datos aleatorios -->
+              <table class="table table-bordered tabled-striped table-hover">
+                <thead>
+                  <th>N°</th>
+                  <th class="d-none d-xl-table-cell">Apellido</th>
+                  <th class="d-none d-xl-table-cell">Nombre</th>
+                  <th class="d-none d-xl-table-cell">Email</th>
+                  <th class="d-xl-none">Estudiante</th>
+                  <th class="d-none d-xl-table-cell"></th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="d-none d-xl-table-cell">Barron</td>
+                    <td class="d-none d-xl-table-cell">Hegerty</td>
+                    <td class="d-none d-xl-table-cell">bhegerty0@trellian.com</td>
+                    <td class="d-xl-none">Hegerty <span class="fw-bold">Barron</span> <br><span
+                        class="small">bhegerty0@trellian.com</span> </td>
+                    <td class="d-none d-xl-table-cell"></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="d-none d-xl-table-cell">Haleigh</td>
+                    <td class="d-none d-xl-table-cell">Hakewell</td>
+                    <td class="d-none d-xl-table-cell">hhakewell1@army.mil</td>
+                    <td class="d-xl-none">Hakewell <span class="fw-bold">Haleigh</span> <br> <span
+                        class="small">tyouhill2@domainmarket.com</span></td>
+                    <td class="d-none d-xl-table-cell"></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="d-none d-xl-table-cell">Thorsten</td>
+                    <td class="d-none d-xl-table-cell">Youhill</td>
+                    <td class="d-none d-xl-table-cell">tyouhill2@domainmarket.com</td>
+                    <td class="d-xl-none">Youhill <span class="fw-bold">Thorsten</span> <br><span
+                        class="small">tyouhill2@domainmarket.com</span></td>
+                    <td class="d-none d-xl-table-cell"></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="d-none d-xl-table-cell">Seamus</td>
+                    <td class="d-none d-xl-table-cell">Toward</td>
+                    <td class="d-none d-xl-table-cell">stoward3@google.com.au</td>
+                    <td class="d-xl-none">Toward <span class="fw-bold">Seamus</span> <br> <span
+                        class="small">stoward3@google.com.au</span></td>
+                    <td class="d-none d-xl-table-cell"></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td class="d-none d-xl-table-cell">Pearson</td>
+                    <td class="d-none d-xl-table-cell">Waldo</td>
+                    <td class="d-none d-xl-table-cell">wpearson4@phpbb.com</td>
+                    <td class="d-xl-none">Pearson<span class="fw-bold">Waldo</span> <br> <span
+                        class="small">wpearson4@phpbb.com</span>
+                    </td>
+                    <td class="d-none d-xl-table-cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- tabla movil -->
+              <!-- <table class="table table-bordered tabled-striped table-hover d-xl-none">
+                <thead>
+                  <th>N°</th>
+                  <th>Estudiante</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td>Barron Hegerty
+                      <br> bhegerty0@trellian.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td>Haleigh Hakewell
+                      <br> hhakewell1@army.mil
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>Thorsten Youhill
+                      <br> bhegerty0@trellian.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>Barron Hegerty
+                      <br> bhegerty0@trellian.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>Pearson Waldo
+                      <br> wpearson4@phpbb.com
+                    </td>
+                  </tr> -->
+
+
+              </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
